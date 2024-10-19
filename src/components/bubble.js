@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useAnimations, useGLTF } from "@react-three/drei"
+import { motion } from "framer-motion-3d";
 import { useEffect, useRef } from "react"
-
 import * as THREE from "three"
 import { navigate } from "gatsby"
 
@@ -59,13 +59,14 @@ export default function Bubble({ onPointerOver, onPointerOut }) {
   }
 
   return (
-    <primitive
+    <motion.group
       onClick={handleClick}
       onPointerOver={onPointerOver}
       onPointerOut={onPointerOut}
-      object={bubble.scene}
-      scale={0.2}
-      position={[1, 0.7, 0]}
-    />
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <primitive object={bubble.scene} scale={0.2} position={[1, 0.7, 0]} />
+    </motion.group>
   )
 }

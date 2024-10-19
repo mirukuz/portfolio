@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Welcome to Molly Zhou's portfolio`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Molly Zhou`,
+      summary: `who lives and works in Melbourne and loves create things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Molly Zhou - Creative Developer`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      instagram: `mirukuz`,
     },
   },
   plugins: [
