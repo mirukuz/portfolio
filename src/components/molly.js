@@ -16,7 +16,6 @@ export default function Molly() {
 
   useEffect(() => {
     if (!animations.actions || !animations.actions.eyeAction) return;
-
     const eyeAction = animations.actions.eyeAction;
 
     // Store the reference to AnimationAction

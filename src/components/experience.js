@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import {
   PresentationControls,
   Float,
@@ -9,7 +9,7 @@ import {
 import { useThree, useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 import Molly from "./molly";
-import GradientBackground from "./gradientBackground";
+import Bubble from "./bubble";
 
 function Rig() {
   const { camera, mouse } = useThree();
@@ -25,9 +25,40 @@ function Rig() {
 }
 
 export default function Experience() {
+  const [bubbleVisible, setBubbleVisible] = React.useState(false);
+  const { gl } = useThree();
+  React.useEffect(() => {
+    let showTimeout, hideTimeout;
+
+    const showBubble = () => {
+      setBubbleVisible(true);
+      hideTimeout = setTimeout(hideBubble, 3000); // Minimum 3 seconds display time
+    };
+
+    const hideBubble = () => {
+      setBubbleVisible(false);
+      showTimeout = setTimeout(showBubble, Math.random() * 5000 + 7000); // Random time between 7 to 12 seconds + the 3 seconds it was visible
+    };
+
+    showTimeout = setTimeout(showBubble, Math.random() * 5000 + 2000); // Initial delay
+
+    return () => {
+      clearTimeout(showTimeout);
+      clearTimeout(hideTimeout);
+      gl.domElement.style.cursor = "grab";
+    };
+  }, [gl.domElement.style.cursor]); // Empty dependency array to ensure it's only set up once
+
+  const handlePointerOver = () => {
+    gl.domElement.style.cursor = "pointer";
+  };
+
+  const handlePointerOut = () => {
+    gl.domElement.style.cursor = "grab";
+  };
+
   return (
     <>
-      {/* <GradientBackground /> */}
       <Environment preset="sunset" />
       <ambientLight intensity={0.7} />
       <PresentationControls
@@ -38,22 +69,25 @@ export default function Experience() {
       >
         <Float rotationIntensity={0.4}>
           <Molly />
+          {bubbleVisible && 
+            <Bubble onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} />
+          }
         </Float>
       </PresentationControls>
-      <Center scale="0.1" position={[0,-0.8,0]}>
-      <Text3D
-        letterSpacing={0.5}
-        font="/fonts/helvetiker_regular.typeface.json"
-        height={0.2}
-        curveSegments={12}
-        bevelEnabled
-        bevelThickness={0.02}
-        bevelSize={0.02}
-        bevelOffset={0}
-        bevelSegments={5}
-      >
-        MOLLY
-      </Text3D>
+      <Center scale="0.1" position={[0, -0.8, 0]}>
+        <Text3D
+          letterSpacing={0.5}
+          font="/fonts/helvetiker_regular.typeface.json"
+          height={0.2}
+          curveSegments={12}
+          bevelEnabled
+          bevelThickness={0.02}
+          bevelSize={0.02}
+          bevelOffset={0}
+          bevelSegments={5}
+        >
+          MOLLY
+        </Text3D>
       </Center>
       <Rig />
     </>
