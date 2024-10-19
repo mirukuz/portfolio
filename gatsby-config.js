@@ -12,7 +12,7 @@ module.exports = {
     title: `Welcome to Molly Zhou's portfolio`,
     author: {
       name: `Molly Zhou`,
-      summary: `who lives and works in Melbourne and loves create things.`,
+      summary: `who lives and works in Melbourne and loves creating things.`,
     },
     description: `Molly Zhou - Creative Developer`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
