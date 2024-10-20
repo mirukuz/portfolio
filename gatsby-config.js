@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Welcome to Molly Zhou's portfolio`,
+    title: `Welcome to Molly Zhou's Rainforest Mind`,
     author: {
       name: `Molly Zhou`,
-      summary: `who lives and works in Melbourne and loves creating things.`,
+      summary: `a Melbourne based fullstack developer at REA Group. When not immersed in coding, Molly passionately creates and explores a diverse range of interests and skills. She thrives on bringing ideas to life, blending her technical expertise with a creative spirit.`,
     },
     description: `Molly Zhou - Creative Developer`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,

@@ -55,7 +55,7 @@ export default function Bubble({ onPointerOver, onPointerOut }) {
   }, [animations.actions])
 
   const handleClick = () => {
-    navigate("/hello-world")
+    navigate("/antar-chat-with-inner-world")
   }
 
   return (
