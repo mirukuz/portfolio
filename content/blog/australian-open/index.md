@@ -2,7 +2,7 @@
 title: the Australian Open - The story of our Grand Slam
 date: "2015-05-06T23:46:37.121Z"
 slug: interactive website
-description: A project which documents the story of Australia’s Grand Slam, written and designed by Monash journalism students and Masters of Multimedia Design students, published on the Australian online version.
+description: A project which documents the story of Australia’s Grand Slam, published on the Australian online version.
 ---
 
 ![Australian Open](./open.png)
@@ -13,7 +13,7 @@ My primary role involved building the interactive components of the experience. 
 
 The project required a robust understanding of web development, user experience design, and multimedia integration. I leveraged a variety of technologies and tools to ensure the final product was seamless, intuitive, and highly engaging. The interactive timeline not only narrates the history but also allows users to explore significant moments and milestones interactively.
 
-This project was a milestone in my academic and professional journey, showcasing my ability to work collaboratively on large-scale projects and my commitment to creating compelling digital experiences. It also emphasized the power of interactive storytelling in enhancing audience engagement and preserving historical narratives.
+This project was a milestone in my academic journey, showcasing my ability to work collaboratively on large-scale projects and my commitment to creating compelling digital experiences. It also emphasized the power of interactive storytelling in enhancing audience engagement and preserving historical narratives.
 
 ## Link
 

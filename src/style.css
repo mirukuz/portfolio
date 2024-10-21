@@ -276,6 +276,10 @@ a:focus {
 .post-list-item header {
   margin-bottom: var(--spacing-4);
 }
+.header-link-home-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
 .header-link-home {
   font-weight: var(--fontWeight-bold);

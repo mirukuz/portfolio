@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import {
   PresentationControls,
   Float,
@@ -14,10 +14,10 @@ import Tennisball from "./tennisBall";
 import ColorPalette from "./colorPalette";
 import Succulent from "./succulent";
 import VRHeadset from "./vrHeadset";
-import RubberDuck from "./rubberDuck"
+import RubberDuck from "./rubberDuck";
 import House from "./house";
 import MovieClapper from "./movieClapper";
-import FloatingRotatingElement from "../utils/floatingRotatingElement"
+import FloatingRotatingElement from "../utils/floatingRotatingElement";
 
 function Rig() {
   const { camera, mouse } = useThree();
@@ -33,9 +33,9 @@ function Rig() {
 }
 
 export default function Experience() {
-  const [bubbleVisible, setBubbleVisible] = React.useState(false);
-  const { gl } = useThree();
-  React.useEffect(() => {
+  const [bubbleVisible, setBubbleVisible] = useState(false);
+
+  useEffect(() => {
     let showTimeout, hideTimeout;
 
     const showBubble = () => {
@@ -53,17 +53,9 @@ export default function Experience() {
     return () => {
       clearTimeout(showTimeout);
       clearTimeout(hideTimeout);
-      gl.domElement.style.cursor = "grab";
     };
-  }, [gl.domElement.style.cursor, gl.domElement.style]); // Empty dependency array to ensure it's only set up once
+  },[]);
 
-  const handlePointerOver = () => {
-    gl.domElement.style.cursor = "pointer";
-  };
-
-  const handlePointerOut = () => {
-    gl.domElement.style.cursor = "grab";
-  };
 
   return (
     <>
@@ -78,27 +70,27 @@ export default function Experience() {
         <Float rotationIntensity={0.4}>
           <Molly />
           {bubbleVisible && 
-            <Bubble onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} />
+            <Bubble />
           }
-          <FloatingRotatingElement position={[2, 0, 0]} rotationIntensity={0} floatIntensity={0.2} speed={0.1}>
+          <FloatingRotatingElement url="/3d-gallery" position={[1.7, 0, 0]} rotationIntensity={0} floatIntensity={0.2} speed={0.1}>
             <ColorPalette />
           </FloatingRotatingElement>
-          <FloatingRotatingElement position={[-2, 0, 0]} rotationIntensity={0} floatIntensity={0.1} speed={0.1}>
+          <FloatingRotatingElement url= "/what-is-feminism" position={[-2, 0, 0]} rotationIntensity={0} floatIntensity={0.1} speed={0.1}>
             <MovieClapper />
           </FloatingRotatingElement>
-          <FloatingRotatingElement position={[-1, 0.8, 0]} rotationIntensity={0} floatIntensity={0.2} speed={0.1}>
+          <FloatingRotatingElement url= "/plants-can-sing" position={[-1, 0.8, 0]} rotationIntensity={0} floatIntensity={0.2} speed={0.1}>
             <Succulent />
           </FloatingRotatingElement>
-          <FloatingRotatingElement position={[1.5, 1, 0]} rotationIntensity={6} floatIntensity={0.2} speed={0.1}>
+          <FloatingRotatingElement url="/sim-life" position={[1.5, 1, 0]} rotationIntensity={6} floatIntensity={0.2} speed={0.1}>
             <VRHeadset />
           </FloatingRotatingElement>
-          <FloatingRotatingElement position={[-2, 0.7, 0]} rotationIntensity={6} floatIntensity={0.2} speed={0.1}>
+          <FloatingRotatingElement url="/antar-chat-with-inner-world" position={[-2, 0.7, 0]} rotationIntensity={6} floatIntensity={0.2} speed={0.1}>
             <RubberDuck />
           </FloatingRotatingElement>
-          <FloatingRotatingElement position={[1.5, -1, 0]} rotationIntensity={1} floatIntensity={0.1} speed={0.1}>
+          <FloatingRotatingElement url="/buyer-agent-site" position={[1.5, -1, 0]} rotationIntensity={1} floatIntensity={0.1} speed={0.1}>
             <House />
           </FloatingRotatingElement>
-          <FloatingRotatingElement position={[-1.3, -1.1, 0]} rotationIntensity={3} floatIntensity={0.2} speed={0.1}>
+          <FloatingRotatingElement url="/australian-open" position={[-1.3, -1.1, 0]} rotationIntensity={3} floatIntensity={0.2} speed={0.1}>
             <Tennisball />
           </FloatingRotatingElement>
         </Float>

@@ -3,16 +3,15 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
-
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
   siteMetadata: {
-    title: `Welcome to Molly Zhou's Rainforest Mind`,
+    title: `< Molly Zhou`,
     author: {
       name: `Molly Zhou`,
-      summary: `a Melbourne based fullstack developer at REA Group. When not immersed in coding, Molly passionately creates and explores a diverse range of interests and skills. She thrives on bringing ideas to life, blending her technical expertise with a creative spirit.`,
+      summary: `is a Melbourne based fullstack developer at REA Group. When not immersed in coding, Molly passionately creates and explores a diverse range of interests and skills. She thrives on bringing ideas to life, blending her technical expertise with a creative spirit.`,
     },
     description: `Molly Zhou - Creative Developer`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
@@ -34,6 +33,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-omni-font-loader',
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`],
+        web: [
+          {
+            name: 'Noto Serif',
+            file: 'https://fonts.googleapis.com/css2?family=Arima:wght@500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap',
+          },
+        ],
       },
     },
     {

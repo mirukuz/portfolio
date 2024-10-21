@@ -5,9 +5,11 @@ slug: animation, Adobe After Effect, Story telling
 description: An animated exploration of feminism created with Adobe After Effects.
 ---
 
-![animation-screenshot-1](./fms1.png)
-![animation-screenshot-2](./fms2.png)
-![animation-screenshot-3](./fms3.png)
+![fms1](./fms1.png)
+
+![fms2](./fms2.png)
+
+![fms3](./fms3.png)
 
 "What is Feminism" is a motion graphic animation I created during my studies in Multimedia Design at Monash University. This project marked my first foray into the world of animation using Adobe After Effects, a skill I picked up and honed within three months.
 

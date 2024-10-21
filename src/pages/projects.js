@@ -23,7 +23,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} titleLeft={"< Molly Zhou"} linkLeft="/" titleRight={"Professional History >"} linkRight="/professional-history">
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {

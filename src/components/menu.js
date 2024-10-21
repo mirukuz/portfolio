@@ -1,5 +1,6 @@
 // HamburgerMenu.js
 import React, { useState } from 'react';
+import { FaLinkedin } from 'react-icons/fa';
 import { Link } from 'gatsby';
 import '../styles/menu.css';
 
@@ -19,9 +20,16 @@ const Menu = () => {
       </div>
       <div className={`menu ${open ? 'show' : ''}`}>
         <ul>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link class="link" to="/professional-history">Professional History</Link></li>
+          <li><Link class="link" to="/projects">Hobby Projects</Link></li>
+          <li>
+            <Link class="link" to="https://www.linkedin.com/in/molly-zhou-bb661297" target="_blank" rel="noopener noreferrer">
+              {/* Uncomment the below line if using react-fontawesome */}
+              {/* <FontAwesomeIcon icon={faLinkedin} /> */}
+              <FaLinkedin class="fab"/>
+              LinkedIn
+            </Link>
+          </li>
         </ul>
       </div>
     </>
