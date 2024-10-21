@@ -10,6 +10,14 @@ import { useThree, useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 import Molly from "./molly";
 import Bubble from "./bubble";
+import Tennisball from "./tennisBall";
+import ColorPalette from "./colorPalette";
+import Succulent from "./succulent";
+import VRHeadset from "./vrHeadset";
+import RubberDuck from "./rubberDuck"
+import House from "./house";
+import MovieClapper from "./movieClapper";
+import FloatingRotatingElement from "../utils/floatingRotatingElement"
 
 function Rig() {
   const { camera, mouse } = useThree();
@@ -47,7 +55,7 @@ export default function Experience() {
       clearTimeout(hideTimeout);
       gl.domElement.style.cursor = "grab";
     };
-  }, [gl.domElement.style.cursor]); // Empty dependency array to ensure it's only set up once
+  }, [gl.domElement.style.cursor, gl.domElement.style]); // Empty dependency array to ensure it's only set up once
 
   const handlePointerOver = () => {
     gl.domElement.style.cursor = "pointer";
@@ -72,12 +80,33 @@ export default function Experience() {
           {bubbleVisible && 
             <Bubble onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} />
           }
+          <FloatingRotatingElement position={[2, 0, 0]} rotationIntensity={0} floatIntensity={0.2} speed={0.1}>
+            <ColorPalette />
+          </FloatingRotatingElement>
+          <FloatingRotatingElement position={[-2, 0, 0]} rotationIntensity={0} floatIntensity={0.1} speed={0.1}>
+            <MovieClapper />
+          </FloatingRotatingElement>
+          <FloatingRotatingElement position={[-1, 0.8, 0]} rotationIntensity={0} floatIntensity={0.2} speed={0.1}>
+            <Succulent />
+          </FloatingRotatingElement>
+          <FloatingRotatingElement position={[1.5, 1, 0]} rotationIntensity={6} floatIntensity={0.2} speed={0.1}>
+            <VRHeadset />
+          </FloatingRotatingElement>
+          <FloatingRotatingElement position={[-2, 0.7, 0]} rotationIntensity={6} floatIntensity={0.2} speed={0.1}>
+            <RubberDuck />
+          </FloatingRotatingElement>
+          <FloatingRotatingElement position={[1.5, -1, 0]} rotationIntensity={1} floatIntensity={0.1} speed={0.1}>
+            <House />
+          </FloatingRotatingElement>
+          <FloatingRotatingElement position={[-1.3, -1.1, 0]} rotationIntensity={3} floatIntensity={0.2} speed={0.1}>
+            <Tennisball />
+          </FloatingRotatingElement>
         </Float>
       </PresentationControls>
       <Center scale="0.1" position={[0, -0.8, 0]}>
         <Text3D
           letterSpacing={0.5}
-          font="/fonts/helvetiker_regular.typeface.json"
+          font="/fonts/Eracake_Regular.json"
           height={0.2}
           curveSegments={12}
           bevelEnabled
