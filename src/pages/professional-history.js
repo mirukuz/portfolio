@@ -19,23 +19,32 @@ const Resume = ({ data, location }) => {
           As an accomplished software engineer, I am deeply committed to
           delivering outstanding results with a keen focus on customer needs. My
           expertise spans across web development, particularly in frontend and
-          backend-as-frontend (BFF) applications, where I have worked on
-          numerous projects. This experience has honed my skills in creating
-          seamless and efficient user experiences. Recently, I have expanded my
-          skill set into the data engineering domain, specializing in functional
-          programming with Scala and leveraging Apache Flink for sophisticated
-          data processing. Known for my rapid learning capabilities and diligent
-          work ethic, I am intensely self-motivated, constantly seeking new
-          challenges and opportunities to grow. Alongside a strong commitment to
-          team collaboration, I consistently strive to blend technical acumen
-          with practical applications to drive business value.
+          backend-as-frontend (BFF) applications, where I have built web
+          applications from scratch and delivered seamless, end-to-end consumer
+          experiences. I excel in merging design and code to create engaging,
+          interactive experiences, with proficiency in HTML, CSS, JavaScript,
+          and React. Recently, I have expanded my skill set into the data
+          engineering domain, specializing in functional programming with Scala
+          and leveraging Apache Flink for sophisticated data processing.
+        </p>
+        <p>
+          Known for my rapid learning capabilities and diligent work ethic, I
+          thrive in collaborative environments, working closely with designers,
+          stakeholders, and researchers to transform conceptual ideas into
+          technical solutions. I have a keen sense for new trends in technology and
+          design, always staying abreast of the latest developments and actively
+          engaging with cutting-edge advancements. My enthusiasm for emerging technologies, such as
+          AI and web3, fuels my drive to prototype innovative solutions and
+          shape the future of design. I am also passionate about sharing knowledge
+          and helping others, especially individuals from underrepresented
+          groups entering the tech industry.
         </p>
       </section>
 
       <section>
         <h2>Professional Experience</h2>
         <div>
-          <h3>👩🏻‍💻 Senior Developer at REA Group / realestate.com.au</h3>
+          <h3>👩🏻‍💻 Senior Developer at REA Group</h3>
           <p>
             <strong>01 Jan 2021 - Now</strong>
           </p>
@@ -146,7 +155,7 @@ const Resume = ({ data, location }) => {
           </ul>
         </div>
         <div>
-          <h3>👩🏻‍💻 Developer at REA Group / realestate.com.au</h3>
+          <h3>👩🏻‍💻 Developer at REA Group</h3>
           <p>
             <strong>22 Nov 2017 - 31 Dec 2020</strong>
           </p>
@@ -329,12 +338,14 @@ const Resume = ({ data, location }) => {
           </ul>
           <h4>Skills and Technologies:</h4>
           <ul>
-          <li>Web: HTML5, CSS3, Javascript (Node.js), video.js, p5.js, JQuery</li>
-          <li>Platform: Ghost</li>
-          <li>Build tools: Webpack, Yarn</li>
-          <li>Database: MySQL</li>
-          <li>Web servers: Nginx</li>
-          <li>OS: Linux (Ubuntu 16.04)</li>
+            <li>
+              Web: HTML5, CSS3, Javascript (Node.js), video.js, p5.js, JQuery
+            </li>
+            <li>Platform: Ghost</li>
+            <li>Build tools: Webpack, Yarn</li>
+            <li>Database: MySQL</li>
+            <li>Web servers: Nginx</li>
+            <li>OS: Linux (Ubuntu 16.04)</li>
           </ul>
         </div>
         <div>
