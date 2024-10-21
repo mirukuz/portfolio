@@ -20,7 +20,7 @@ const Menu = () => {
       </div>
       <div className={`menu ${open ? 'show' : ''}`}>
         <ul>
-          <li><Link class="link" to="/professional-history">Professional History</Link></li>
+          <li><Link class="link" to="/professional-history">Work History</Link></li>
           <li><Link class="link" to="/projects">Hobby Projects</Link></li>
           <li>
             <Link class="link" to="https://www.linkedin.com/in/molly-zhou-bb661297" target="_blank" rel="noopener noreferrer">
