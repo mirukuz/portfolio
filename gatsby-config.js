@@ -8,7 +8,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `< Molly Zhou`,
+    title: `Molly Zhou`,
     author: {
       name: `Molly Zhou`,
       summary: `is a Melbourne based fullstack developer at REA Group. When not immersed in coding, Molly passionately creates and explores a diverse range of interests and skills. She thrives on bringing ideas to life, blending her technical expertise with a creative spirit.`,

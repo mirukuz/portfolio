@@ -13,6 +13,25 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
+      <nav className="blog-post-nav">
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to="/projects" >
+                ← Back to Projects
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
       <article
         className="blog-post"
         itemScope

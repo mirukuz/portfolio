@@ -6,9 +6,9 @@ const Resume = ({ data, location }) => {
   return (
     <Layout
       location={location}
-      titleLeft={"< Molly Zhou"}
+      titleLeft={"← Molly Zhou"}
       linkLeft="/"
-      titleRight={"Hobby Projects >"}
+      titleRight={"Hobby Projects →"}
       linkRight="/projects"
     >
       <Seo title="Resume" />
