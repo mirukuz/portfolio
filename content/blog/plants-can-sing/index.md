@@ -1,6 +1,6 @@
 ---
 title: Plants can sing
-date: "2023-10-06T23:46:37.121Z"
+date: "2016-08-06T23:46:37.121Z"
 slug: Arduino, interactive design
 description: an interactive Arduino-based device that produces sounds when succulents are touched, showcased at an international marketing event.
 ---

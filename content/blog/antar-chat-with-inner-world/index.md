@@ -1,6 +1,6 @@
 ---
 title: Antar - Chat with Inner World
-date: "2024-05-28T22:40:32.169Z"
+date: "2022-10-28T22:40:32.169Z"
 description: A unique app facilitating self-reflection and internal dialogue.
 slug: indie dev, software engineering, self-growth
 ---
