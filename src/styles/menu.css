@@ -21,7 +21,7 @@
 }
 
 .hamburger.open .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-8px, 8px);
 }
 
 .hamburger.open .bar2 {
@@ -29,7 +29,7 @@
 }
 
 .hamburger.open .bar3 {
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-7px, -8px);
 }
 
 .menu {
